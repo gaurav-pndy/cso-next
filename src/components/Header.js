@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 // Page-level navigation links for easy mapping
 const navLinks = [
   { href: "/about-us", label: "About Us" },
-  { href: "/work", label: "Our Work" },
+  { href: "/our-work", label: "Our Work" },
   { href: "/get-involved", label: "Get Involved" },
   { href: "/contact", label: "Contact" },
 ];

@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute bottom-0 right-0 inset-0">
         <Image
-          src="/About/Hero_Image.png"
+          src="/Work/Hero Image.png"
           alt="Hero Image"
           fill
           priority
@@ -22,15 +22,16 @@ export default function Hero() {
       {/* Content */}
       <section className="max-w-7xl  w-full mx-auto">
         <div className="relative  z-20 flex flex-col max-w-xl pt-28 lg:pt-10">
-          <h1 className="text-4xl text-white md:text-5xl lg:text-6xl font-bold mb-3 lg:leading-18">
-            About the Centre for Scientific Outreach (CSO)
+          <h1 className="text-4xl text-[#0061e5] md:text-5xl lg:text-6xl font-bold mb-3 lg:leading-18">
+            Our Work in Action
           </h1>
 
-          <p className="text-gray-200 max-w-104 xl:max-w-full lg:text-lg lg:leading-8 mb-6">
-            At the Centre for Scientific Outreach (CSO), our values guide every
-            classroom session, every community programme, and every initiative
-            we launch across Delhi & India. They reflect what we stand for - and
-            what we work tirelessly to achieve.
+          <p className="text-gray-800 max-w-104 xl:max-w-full lg:text-lg lg:leading-8 mb-6">
+            From classroom education to national aviation olympiad, we are
+            committed to making science accessible, engaging, and inspiring for
+            communities across India. Our initiatives reach students from all
+            backgrounds, empowering them to explore, learn, and achieve their
+            potential.
           </p>
 
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-10">

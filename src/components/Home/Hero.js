@@ -4,7 +4,7 @@ import { FaRegPlayCircle } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="relative md:flex items-center px-4 min-h-screen md:min-h-160 lg:min-h-200 xl:min-h-screen bg-gray-50 overflow-hidden pb-10 md:pb-0">
+    <section className="relative md:flex items-end px-4 min-h-screen md:min-h-160 lg:min-h-200 xl:min-h-screen bg-gray-50 overflow-hidden pb-10 md:pb-16 xl:pb-28">
       {/* Background Image */}
       <div className="absolute h-[30%] md:h-auto bottom-0 right-0 md:inset-0">
         <Image

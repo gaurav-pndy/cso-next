@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f9f9fb] text-[#24242e] px-4 pt-12 pb-2 border-t border-b">
+    <footer className="bg-[#f9f9fb] text-[#24242e] px-4 pt-12 pb-2 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Quick Links */}
         <div>
@@ -26,12 +26,12 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/about">
+              <Link href="/about-us">
                 <span>About Us</span>
               </Link>
             </li>
             <li>
-              <Link href="/work">
+              <Link href="/our-work">
                 <span>Our Work</span>
               </Link>
             </li>
