@@ -33,18 +33,29 @@ export default function Header() {
         {/* Logo + Desktop Navigation */}
         <div className="flex items-center gap-8">
           <Link href="/" aria-label="Home">
-            <Image
-              src="/logo-color.svg"
-              alt="CSO Logo"
-              width={180}
-              height={80}
-              priority
-            />
+            {isActive("/about-us") ? (
+              <Image
+                src="/logo-white.png"
+                alt="CSO Logo"
+                width={160}
+                height={70}
+                priority
+                className="mt-2 ml-2"
+              />
+            ) : (
+              <Image
+                src="/logo-color.svg"
+                alt="CSO Logo"
+                width={180}
+                height={80}
+                priority
+              />
+            )}
           </Link>
           <nav className="hidden lg:flex space-x-12 text-gray-700 ">
             {navLinks.map((link) => (
               <Link
-                className={`${isActive("/about") && "text-white"} ${
+                className={`${isActive("/about-us") && "text-white"} ${
                   isActive(link.href) && "font-semibold"
                 }`}
                 href={link.href}

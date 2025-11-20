@@ -60,11 +60,11 @@ export default function Footer() {
           <div className="space-y-3 ">
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-[#2173e7]" />
-              <span>info@cso.in</span>
+              <a href="mailto:info@cso.in">info@cso.in</a>
             </div>
             <div className="flex items-center gap-2">
               <FaPhone className="text-[#2173e7]" />
-              <span>+91 9211229927</span>
+              <a href="tel:+91921122927">+91 9211229927</a>
             </div>
             <div className="flex items-start gap-2">
               <FaGlobe className="text-[#2173e7] mt-1.5" />
