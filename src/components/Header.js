@@ -16,6 +16,7 @@ const navLinks = [
 
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showDonate, setShowDonate] = useState(false);
 
   const pathname = usePathname();
 
@@ -57,12 +58,12 @@ export default function Header() {
 
         {/* Desktop Donate Button */}
         <div className="hidden lg:block">
-          <Link
-            href="/donate"
-            className="bg-linear-to-r from-[#2da9b9] to-[#0366e2] text-white px-5 py-3 rounded-lg shadow-md hover:scale-105 transition-transform"
+          <button
+            onClick={() => setShowDonate(true)}
+            className="bg-linear-to-r cursor-pointer from-[#2da9b9] to-[#0366e2] text-white px-5 py-3 rounded-lg shadow-md hover:scale-105 transition-transform"
           >
             Donate Now
-          </Link>
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -114,13 +115,15 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/donate"
-                className="bg-linear-to-r from-[#2da9b9] to-[#0366e2] text-white px-5 py-3 rounded-lg shadow-md hover:scale-105 transition-transform mt-4 text-center"
-                onClick={() => setSidebarOpen(false)}
+              <button
+                onClick={() => {
+                  setShowDonate(true);
+                  setSidebarOpen(false);
+                }}
+                className="bg-linear-to-r cursor-pointer from-[#2da9b9] to-[#0366e2] text-white px-5 py-3 rounded-lg shadow-md hover:scale-105 transition-transform mt-4 text-center"
               >
                 Donate Now
-              </Link>
+              </button>
             </nav>
           </motion.aside>
         )}
@@ -132,6 +135,40 @@ export default function Header() {
           onClick={() => setSidebarOpen(false)}
         />
       )}
+
+      <AnimatePresence>
+        {showDonate && (
+          <motion.div
+            className="fixed inset-0 bg-black/60 flex justify-center items-center z-[9999] px-4 "
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.div
+              className="bg-white overflow-hidden rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] md:max-h-[47rem] h-full relative"
+              initial={{ scale: 0.8, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <button
+                onClick={() => setShowDonate(false)}
+                className="absolute top-3 right-7 text-gray-600 hover:text-black text-3xl font-bold"
+              >
+                ×
+              </button>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://zohosecurepay.in/checkout/fq35wqxe-8t0it3x73g4s1/Donate-Now"
+                style={{ border: "none" }}
+                title="Donate Now"
+              ></iframe>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
