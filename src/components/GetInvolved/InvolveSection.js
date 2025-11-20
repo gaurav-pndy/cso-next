@@ -1,5 +1,11 @@
 import Image from "next/image";
 import { FaPlay } from "react-icons/fa";
+import { Montserrat_Alternates } from "next/font/google";
+
+const montserrat = Montserrat_Alternates({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const cards = [
   {
@@ -84,7 +90,9 @@ export default function InvolveSection() {
               className="flex flex-col md:flex-row  md:justify-between gap-16"
             >
               <div className="flex-1">
-                <h3 className="text-[#0061e5] text-2xl lg:text-3xl font-bold mt-1 mb-4">
+                <h3
+                  className={`text-[#0061e5] text-2xl lg:text-3xl font-bold mt-1 mb-4 ${montserrat.className} `}
+                >
                   {card.title}
                 </h3>
 

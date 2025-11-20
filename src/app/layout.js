@@ -1,10 +1,10 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import { Poppins } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Footer from "@/components/Footer";
 
-const poppins = Poppins({
+const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={roboto.className}>
         <Header />
         <main className="main-content">{children}</main>
 

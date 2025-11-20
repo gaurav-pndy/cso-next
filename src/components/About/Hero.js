@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegPlayCircle } from "react-icons/fa";
+import { Montserrat_Alternates } from "next/font/google";
+
+const montserrat = Montserrat_Alternates({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function Hero() {
   return (
@@ -22,7 +28,9 @@ export default function Hero() {
       {/* Content */}
       <section className="max-w-7xl  w-full mx-auto">
         <div className="relative  z-20 flex flex-col max-w-xl pt-28 lg:pt-10">
-          <h1 className="text-4xl text-white md:text-5xl lg:text-6xl font-bold mb-3 lg:leading-18">
+          <h1
+            className={`text-4xl text-white md:text-5xl lg:text-6xl font-bold mb-3 lg:leading-18 ${montserrat.className} `}
+          >
             About the Centre for Scientific Outreach (CSO)
           </h1>
 
