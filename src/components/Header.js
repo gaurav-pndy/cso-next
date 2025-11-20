@@ -4,10 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 // Page-level navigation links for easy mapping
 const navLinks = [
-  { href: "/about", label: "About Us" },
+  { href: "/about-us", label: "About Us" },
   { href: "/work", label: "Our Work" },
   { href: "/get-involved", label: "Get Involved" },
   { href: "/contact", label: "Contact" },
@@ -15,6 +16,15 @@ const navLinks = [
 
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  const isActive = (href) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className="absolute top-0 z-50 w-full bg-transparent py-2 px-4">
@@ -30,9 +40,15 @@ export default function Header() {
               priority
             />
           </Link>
-          <nav className="hidden lg:flex space-x-12 text-gray-700 font-medium">
+          <nav className="hidden lg:flex space-x-12 text-gray-700 ">
             {navLinks.map((link) => (
-              <Link href={link.href} key={link.href}>
+              <Link
+                className={`${isActive("/about") && "text-white"} ${
+                  isActive(link.href) && "font-semibold"
+                }`}
+                href={link.href}
+                key={link.href}
+              >
                 {link.label}
               </Link>
             ))}
@@ -43,7 +59,7 @@ export default function Header() {
         <div className="hidden lg:block">
           <Link
             href="/donate"
-            className="bg-gradient-to-r from-[#2da9b9] to-[#0366e2] text-white px-5 py-3 rounded-lg shadow-md hover:scale-105 transition-transform"
+            className="bg-linear-to-r from-[#2da9b9] to-[#0366e2] text-white px-5 py-3 rounded-lg shadow-md hover:scale-105 transition-transform"
           >
             Donate Now
           </Link>
@@ -100,7 +116,7 @@ export default function Header() {
               ))}
               <Link
                 href="/donate"
-                className="bg-gradient-to-r from-[#2da9b9] to-[#0366e2] text-white px-5 py-3 rounded-lg shadow-md hover:scale-105 transition-transform mt-4 text-center"
+                className="bg-linear-to-r from-[#2da9b9] to-[#0366e2] text-white px-5 py-3 rounded-lg shadow-md hover:scale-105 transition-transform mt-4 text-center"
                 onClick={() => setSidebarOpen(false)}
               >
                 Donate Now

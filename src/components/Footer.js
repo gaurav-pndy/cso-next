@@ -110,7 +110,7 @@ export default function Footer() {
             Stay connected with us and let’s hear more stories about Science and
             education.
           </p>
-          <div className="flex gap-4 xl:gap-6 text-[#2173e7] text-xl">
+          <div className="flex flex-wrap gap-4 xl:gap-6 text-[#2173e7] text-xl">
             <a
               className="bg-[#e1ebf9] p-2 rounded-full"
               href="https://facebook.com"
@@ -152,7 +152,7 @@ export default function Footer() {
               width={148}
               height={80}
             />
-            <span className="text-[#46b4c1] font-medium text-xs lg: text-sm">
+            <span className="text-[#46b4c1] font-medium text-xs lg:text-sm">
               सा विद्या या विमुक्तये <br />
               <span className="text-[#24242e]">
                 That is knowledge which liberates.

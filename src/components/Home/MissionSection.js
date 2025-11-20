@@ -19,9 +19,9 @@ export default function MissionSection() {
             opportunities that transform lives.
           </p>
         </div>
-        <div className="relative flex-shrink-0">
+        <div className="relative shrink-0">
           {/* Top Row */}
-          <div className="flex gap-4 lg:gap-8 gap-4 mb-4 lg:mb-8 items-end">
+          <div className="flex gap-4 lg:gap-8  mb-4 lg:mb-8 items-end">
             {/* Top Left - Tall image */}
             <div className="w-1/2 h-44 md:w-1/2 md:h-60 rounded-3xl overflow-hidden  bg-gray-100">
               <Image

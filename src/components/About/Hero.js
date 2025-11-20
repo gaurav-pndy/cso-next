@@ -6,9 +6,9 @@ export default function Hero() {
   return (
     <section className="relative md:flex items-center px-4 min-h-screen md:min-h-160 lg:min-h-200 xl:min-h-screen bg-gray-50 overflow-hidden pb-10 md:pb-0">
       {/* Background Image */}
-      <div className="absolute h-[30%] md:h-auto bottom-0 right-0 md:inset-0">
+      <div className="absolute bottom-0 right-0 inset-0">
         <Image
-          src="/hero-img.png"
+          src="/About/Hero_Image.png"
           alt="Hero Image"
           fill
           priority
@@ -21,28 +21,18 @@ export default function Hero() {
 
       {/* Content */}
       <section className="max-w-7xl  w-full mx-auto">
-        <div className="relative  z-20 flex flex-col max-w-2xl pt-28 lg:pt-10">
-          <h1 className="text-4xl text-[#24242e] md:text-5xl lg:text-6xl font-bold mb-3 lg:leading-18">
-            Centre for{" "}
-            <span className="text-[#0061e5]">Scientific Outreach (CSO)</span>
+        <div className="relative  z-20 flex flex-col max-w-xl pt-28 lg:pt-10">
+          <h1 className="text-4xl text-white md:text-5xl lg:text-6xl font-bold mb-3 lg:leading-18">
+            About the Centre for Scientific Outreach (CSO)
           </h1>
-          <p className="text-[#46b4c1] font-medium text-sm md:text-xl mb-2 md:mb-4">
-            सा विद्या या विमुक्तये — That is knowledge which liberates.
+
+          <p className="text-gray-200 max-w-104 xl:max-w-full lg:text-lg lg:leading-8 mb-6">
+            At the Centre for Scientific Outreach (CSO), our values guide every
+            classroom session, every community programme, and every initiative
+            we launch across Delhi & India. They reflect what we stand for - and
+            what we work tirelessly to achieve.
           </p>
-          <p className="text-gray-700 max-w-104 xl:max-w-full lg:text-lg lg:leading-8">
-            At CSO, we believe that science and technology should be within
-            everyone’s reach. We are a not-for-profit organiz
-          </p>
-          <p className="text-gray-700 max-w-104 xl:max-w-full lg:text-lg mb-2 md:mb-4 lg:leading-8">
-            From nurturing curiosity in young minds from underserved communities
-            to empowering the next generation of scientists, innovators, and
-            aviators, CSO is creating pathways where knowledge meets
-            possibility.{" "}
-          </p>
-          <p className="text-gray-800 max-w-104 lg:max-w-full font-medium lg:text-lg mb-4 md:mb-8 lg:leading-8">
-            Together, we’re not just spreading education — we’re igniting
-            futures.
-          </p>
+
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-10">
             <Link
               href="/submit"

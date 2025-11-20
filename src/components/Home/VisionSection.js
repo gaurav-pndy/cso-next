@@ -5,7 +5,7 @@ export default function VisionSection() {
     <section className="relative z-10 py-16 px-4  ">
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto items-center lg:items-center gap-12  xl:gap-48">
         {/* Images Grid */}
-        <div className="relative flex-shrink-0">
+        <div className="relative shrink-0">
           {/* Top Row */}
           <div className="flex gap-4 lg:gap-8 mb-4 lg:mb-8">
             {/* Top Left - Tall image */}
