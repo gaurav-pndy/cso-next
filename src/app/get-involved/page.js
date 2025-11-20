@@ -1,4 +1,8 @@
+import BenefitsSection from "@/components/GetInvolved/BenefitsSection";
 import Hero from "@/components/GetInvolved/Hero";
+import InvolveSection from "@/components/GetInvolved/InvolveSection";
+import ReadySection from "@/components/ReadySection";
+import SupportSection from "@/components/GetInvolved/SupportSection";
 
 export const metadata = {
   title: "Get Involved | Centre for Scientific Outreach",
@@ -10,7 +14,10 @@ export default function GetInvolvedPage() {
   return (
     <div className="relative">
       <Hero />
-
+      <InvolveSection />
+      <SupportSection />
+      <BenefitsSection />
+      <ReadySection />
       {/* Add more sections below */}
     </div>
   );

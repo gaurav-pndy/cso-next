@@ -90,7 +90,7 @@ export default function PillarCards() {
           {pillars.map((pillar, idx) => (
             <div
               key={pillar.title}
-              className="flex flex-col md:flex-row md:items-center md:justify-between gap-16"
+              className="flex flex-col md:flex-row  md:justify-between gap-16"
             >
               <div className="flex-1">
                 <span className="font-semibold text-[#eead64]">

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function JoinSection() {
   return (
     <section className="flex justify-center  py-10 px-4">
-      <div className="flex flex-col md:flex-row gap-10 items-center md:items-center w-full max-w-3xl md:max-w-6xl rounded-2xl overflow-hidden bg-linear-to-tr from-[#0061e5] to-[#2ba7ba] p-4 md:p-12 shadow-lg">
+      <div className="flex flex-col md:flex-row gap-10 items-center md:items-center w-full max-w-3xl md:max-w-6xl rounded-3xl overflow-hidden bg-linear-to-tr from-[#0061e5] to-[#2ba7ba] p-4 md:p-12 shadow-lg">
         {/* Illustration - replace src path with your actual image file */}
         <div className="md:w-1/3 w-full flex justify-center md:justify-start mb-6 md:mb-0">
           <Image
