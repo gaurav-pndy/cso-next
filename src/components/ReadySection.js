@@ -32,11 +32,11 @@ export default function ReadySection() {
               General Inquiries
               <br />
               <a
-                href="mailto:info@cso.in"
+                href="mailto:info@thecso.in"
                 target="_blank"
                 className="font-semibold"
               >
-                info@cso.in
+                info@thecso.in
               </a>
             </div>
 
@@ -44,11 +44,11 @@ export default function ReadySection() {
               Partnerships & Sponsorships
               <br />
               <a
-                href="mailto:partner@cso.in"
+                href="mailto:partner@thecso.in"
                 target="_blank"
                 className="font-semibold"
               >
-                partner@cso.in
+                partner@thecso.in
               </a>
             </div>
           </div>
@@ -138,14 +138,14 @@ export default function ReadySection() {
       <AnimatePresence>
         {showDonate && (
           <motion.div
-            className="fixed inset-0 bg-black/60 flex justify-center items-center z-[9999] px-4 "
+            className="fixed inset-0 bg-black/60 flex justify-center items-center z-9999 px-4 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="bg-white overflow-hidden rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] md:max-h-[47rem] h-full relative"
+              className="bg-white overflow-hidden rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] md:max-h-188 h-full relative"
               initial={{ scale: 0.8, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
