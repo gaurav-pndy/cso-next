@@ -27,7 +27,8 @@ export default function BenefitsSection() {
             <br />
             Opportunities to see tangible results in education and outreach
             <br />
-            Strengthening the foundation of STEM learning and innovation
+            Strengthening the foundation of STEM learning and innovation <br />
+            Tax excemption with 80G
           </p>
         </div>
       </div>

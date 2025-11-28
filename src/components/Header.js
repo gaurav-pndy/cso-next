@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 
 // Page-level navigation links for easy mapping
 const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/about-us", label: "About Us" },
   { href: "/our-work", label: "Our Work" },
   { href: "/get-involved", label: "Get Involved" },
@@ -150,14 +151,14 @@ export default function Header() {
       <AnimatePresence>
         {showDonate && (
           <motion.div
-            className="fixed inset-0 bg-black/60 flex justify-center items-center z-[9999] px-4 "
+            className="fixed inset-0 bg-black/60 flex justify-center items-center z-9999 px-4 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="bg-white overflow-hidden rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] md:max-h-[47rem] h-full relative"
+              className="bg-white overflow-hidden rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] md:max-h-188 h-full relative"
               initial={{ scale: 0.8, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}

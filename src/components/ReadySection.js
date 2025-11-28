@@ -5,37 +5,12 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-// Data for contacts
-const contacts = [
-  {
-    icon: "/GetInvolved/Get_Started_Mail.svg", // replace with your actual icon
-    label: "General Inquiries",
-    value: "info@cso.in",
-    label2: "Partnerships & Sponsorships",
-    value2: "partner@cso.in",
-  },
-  {
-    icon: "/GetInvolved/Get_Started_Call.svg", // replace with your actual icon
-    label: "Phone",
-    value: "+91 92112 29927",
-    label2: "Hours",
-    value2: "Monday – Friday, 9:00 AM – 6:00 PM",
-  },
-  {
-    icon: "/GetInvolved/Get_Started_Address.svg", // replace with your actual icon
-    label: "Address",
-    value: "B-1, Third Floor, Greater Kailash Enclave – II, New Delhi - 110048",
-    label2: "",
-    value2: "",
-  },
-];
-
 export default function ReadySection() {
   const [showDonate, setShowDonate] = useState(false);
   return (
     <section className="flex flex-col  items-center w-full py-10 px-4">
       {/* Info Card */}
-      <div className="bg-[#e9f4fa] rounded-3xl md:rounded-tr-3xl md:rounded-tl-3xl w-full max-w-4xl px-6 py-8 mx-auto mb-6 lg:mb-0">
+      <div className="bg-[#e9f4fa] rounded-3xl md:rounded-none md:rounded-tr-3xl md:rounded-tl-3xl w-full max-w-4xl px-6 py-8 mx-auto mb-6 lg:mb-0">
         <h2 className="text-2xl md:text-4xl font-semibold text-[#213c91] mb-4 text-center">
           Ready to Get Started ?
         </h2>
@@ -45,25 +20,80 @@ export default function ReadySection() {
           support our programs and make a difference.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {contacts.map((c, i) => (
-            <div key={i} className="flex flex-col items-center gap-2">
-              {c.icon && (
-                <Image src={c.icon} alt={c.label} width={56} height={56} />
-              )}
-              <div className="text-sm text-center text-[#213c91]">
-                {c.label}
-                <br />
-                <span className="font-semibold">{c.value}</span>
-              </div>
-              {c.label2 && (
-                <div className="text-sm text-center text-[#213c91]">
-                  {c.label2}
-                  <br />
-                  <span className="font-semibold">{c.value2}</span>
-                </div>
-              )}
+          <div className="flex flex-col items-center gap-2">
+            <Image
+              src="/GetInvolved/Get_Started_Mail.svg"
+              alt="Mail icon"
+              width={56}
+              height={56}
+            />
+
+            <div className="text-sm text-center text-[#213c91]">
+              General Inquiries
+              <br />
+              <a
+                href="mailto:info@cso.in"
+                target="_blank"
+                className="font-semibold"
+              >
+                info@cso.in
+              </a>
             </div>
-          ))}
+
+            <div className="text-sm text-center text-[#213c91]">
+              Partnerships & Sponsorships
+              <br />
+              <a
+                href="mailto:partner@cso.in"
+                target="_blank"
+                className="font-semibold"
+              >
+                partner@cso.in
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <Image
+              src="/GetInvolved/Get_Started_Call.svg"
+              alt="Call icon"
+              width={56}
+              height={56}
+            />
+
+            <div className="text-sm text-center text-[#213c91]">
+              Phone
+              <br />
+              <a href="tel:+91 92112 29927" className="font-semibold">
+                +91 92112 29927
+              </a>
+            </div>
+
+            <div className="text-sm text-center text-[#213c91]">
+              Hours
+              <br />
+              <span className="font-semibold">
+                Monday – Friday, 9:00 AM – 6:00 PM
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Image
+              src="/GetInvolved/Get_Started_Address.svg"
+              alt="Mail icon"
+              width={56}
+              height={56}
+            />
+
+            <div className="text-sm text-center text-[#213c91]">
+              Address
+              <br />
+              <span className="font-semibold">
+                B-1, Third Floor, Greater Kailash Enclave – II, New Delhi -
+                110048
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       {/* CTA Gradient Card */}
@@ -90,7 +120,7 @@ export default function ReadySection() {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <Link
-              href="/get-involved"
+              href="/contact"
               className="bg-[#ffd800] w-full hover:bg-yellow-400 text-[#1d1d1f] font-semibold px-4 lg:px-8 py-3.5 md:w-fit rounded-xl transition-all duration-200 shadow flex justify-center"
             >
               Volunteer With Us

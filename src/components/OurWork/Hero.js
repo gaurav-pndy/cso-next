@@ -41,21 +41,20 @@ export default function Hero() {
             backgrounds, empowering them to explore, learn, and achieve their
             potential.
           </p>
-
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-10">
             <Link
-              href="/submit"
+              href="/about-us"
               className="bg-[#2eabb8] cursor-pointer w-full hover:bg-cyan-600 text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300  focus:outline-none flex justify-center"
             >
-              Submission
+              Read More
             </Link>
-            <Link
-              href="/story"
+            <a
+              href="https://nationalaviationolympiad.com/"
+              target="_blank"
               className="bg-[#eb6747] text-white w-full cursor-pointer hover:bg-[#e8532e] py-4 px-6 rounded-lg font-semibold flex justify-center items-center transition-all duration-300 focus:outline-none"
             >
-              <FaRegPlayCircle className="mr-2 text-lg" />
-              Watch Our Story
-            </Link>
+              National Aviation Olympiad
+            </a>
           </div>
         </div>
       </section>

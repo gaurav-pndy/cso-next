@@ -1,40 +1,61 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import DonationModal from "./DonationModal";
+import { useState } from "react";
 
 const options = [
   {
-    icon: "/GetInvolved/Support_Our_Mission_01.svg", // replace with correct icon file name
+    icon: "/GetInvolved/Support_Our_Mission_01.svg",
     title: "Monthly Giving – Sustained Impact",
     desc: "Become a monthly donor and provide consistent support to ensure our programs continue to grow and reach more students across India.",
     price: "Starting from ₹500/month",
-    button: "#ff7a22",
+    iframe:
+      "https://zohosecurepay.in/checkout/9sb7ysn8-fpw8pmubmwtv0/Monthly-Sponsor",
   },
   {
-    icon: "/GetInvolved/Support_Our_Mission_02.svg", // replace with correct icon file name
+    icon: "/GetInvolved/Support_Our_Mission_02.svg",
     title: "Sponsor a Child – Transform a Life",
     desc: "Fully sponsor a child’s education at Kirby Place School and empower them with access to quality education, mentorship, and daily nourishment.",
     price: "₹2,000/month per child",
-    button: "#ff7a22",
+    iframe:
+      "https://zohosecurepay.in/checkout/yizrmikm-0gd4g97r9db0u/Sponsor-a-Child",
   },
   {
-    icon: "/GetInvolved/Support_Our_Mission_03.svg", // replace with correct icon file name
+    icon: "/GetInvolved/Support_Our_Mission_03.svg",
     title: "Fund a Workshop – Inspire Curiosity",
     desc: "Sponsor a complete science workshop for a school and help students experience hands-on learning, interactive experiments, and STEM enrichment.",
     price: "₹10,000 per workshop",
-    button: "#ff7a22",
+    iframe:
+      "https://zohosecurepay.in/checkout/uefixep6-pk6dknbgn60k5/Fund-a-Workshop",
   },
   {
-    icon: "/GetInvolved/Support_Our_Mission_04.svg", // replace with correct icon file name
+    icon: "/GetInvolved/Support_Our_Mission_04.svg",
     title: "Support Equipment – Enable Learning",
     desc: "Help us equip classrooms and labs with essential laboratory tools, learning materials, and STEM resources, creating a better environment for scientific exploration.",
     price: "₹5,000 – ₹50,000",
-    button: "#ff7a22",
+    iframe:
+      "https://zohosecurepay.in/checkout/n17qe12i-pk6dknbgn60h5/Support-Equipment",
   },
 ];
 
 export default function SupportSection() {
+  const [open, setOpen] = useState(false);
+  const [iframe, setIframe] = useState("");
+
+  const handleOpen = (link) => {
+    setIframe(link);
+    setOpen(true);
+  };
   return (
     <section className="flex justify-center py-10 px-4">
+      <DonationModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        iframe={iframe}
+      />
+
       <div className="bg-[#edf2f8] rounded-3xl w-full max-w-6xl p-10 mx-auto">
         <h2 className="text-3xl md:text-[2.5rem] font-semibold text-[#ee7500] mb-4 text-center">
           Ways to Support Our Mission
@@ -73,12 +94,12 @@ export default function SupportSection() {
                   <div className="text-[#ffdd03] md:text-lg font-semibold mb-4 text-center">
                     {opt.price}
                   </div>
-                  <Link
-                    href="/support"
-                    className="bg-[#ff7a22] text-white font-semibold py-2 px-6 rounded-lg transition-shadow duration-200 shadow hover:shadow-lg text-center"
+                  <button
+                    onClick={() => handleOpen(opt.iframe)}
+                    className="bg-[#ff7a22] cursor-pointer text-white font-semibold py-2 px-6 rounded-lg transition-shadow duration-200 shadow hover:shadow-lg text-center"
                   >
                     Support
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>

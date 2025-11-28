@@ -43,7 +43,7 @@ export default function Hero() {
 
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-10">
             <Link
-              href="/submit"
+              href="/contact"
               className="bg-[#2eabb8] cursor-pointer w-full md:w-40 hover:bg-cyan-600 text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300  focus:outline-none flex justify-center"
             >
               Join Now

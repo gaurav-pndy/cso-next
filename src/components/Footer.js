@@ -40,11 +40,7 @@ export default function Footer() {
                 <span>Get Involved</span>
               </Link>
             </li>
-            <li>
-              <Link href="/impact">
-                <span>Impact Stories</span>
-              </Link>
-            </li>
+
             <li>
               <Link href="/contact">
                 <span>Contact</span>
@@ -113,7 +109,8 @@ export default function Footer() {
           <div className="flex flex-wrap gap-4 xl:gap-6 text-[#2173e7] text-xl">
             <a
               className="bg-[#e1ebf9] p-2 rounded-full"
-              href="https://facebook.com"
+              href="https://www.facebook.com/scientific.outreach"
+              target="_blank"
               aria-label="Facebook"
             >
               <FaFacebook className="text-2xl" />
@@ -121,20 +118,23 @@ export default function Footer() {
             <a
               className="bg-[#e1ebf9] p-2 rounded-full"
               href="https://twitter.com"
+              target="_blank"
               aria-label="Twitter"
             >
               <FaTwitter className="text-2xl" />
             </a>
             <a
               className="bg-[#e1ebf9] p-2 rounded-full"
-              href="https://instagram.com"
+              href="https://www.instagram.com/cso_foundation/"
+              target="_blank"
               aria-label="Instagram"
             >
               <FaInstagram className="text-2xl" />
             </a>
             <a
               className="bg-[#e1ebf9] p-2 rounded-full"
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/csofoundation/"
+              target="_blank"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="text-2xl" />

@@ -111,12 +111,12 @@ export default function InvolveSection() {
                     ))}
                   </ul>
                 </div>
-                <button
+                {/* <button
                   className={`text-white py-3 px-8 mt-2 rounded-xl font-semibold cursor-pointer shadow-md`}
                   style={{ backgroundColor: card.color }}
                 >
                   Support
-                </button>
+                </button> */}
               </div>
               <div className="flex-1  h-full flex items-center justify-center relative">
                 {/* Card with Play Button */}
