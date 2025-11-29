@@ -124,12 +124,12 @@ export default function PillarCards() {
                   </ul>
                   <p>{pillar.footerDesc}</p>
                 </div>
-                <button
+                {/* <button
                   className={`text-white py-3 px-8 mt-2 rounded-xl font-semibold cursor-pointer shadow-md`}
                   style={{ backgroundColor: pillar.color }}
                 >
                   Support
-                </button>
+                </button> */}
               </div>
               <div className="flex-1  h-full flex items-center justify-center relative">
                 {/* Card with Play Button */}

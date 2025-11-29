@@ -28,7 +28,7 @@ export default function BenefitsSection() {
             Opportunities to see tangible results in education and outreach
             <br />
             Strengthening the foundation of STEM learning and innovation <br />
-            Tax excemption with 80G
+            Tax exemption (80G) certificate
           </p>
         </div>
       </div>

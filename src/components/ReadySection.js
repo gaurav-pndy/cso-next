@@ -70,11 +70,10 @@ export default function ReadySection() {
             </div>
 
             <div className="text-sm text-center text-[#213c91]">
-              Hours
+              Our Work Hours
               <br />
-              <span className="font-semibold">
-                Monday – Friday, 9:00 AM – 6:00 PM
-              </span>
+              <span className="font-semibold">10:00 AM to 6:00 PM</span> <br />
+              <span className="font-semibold">Monday - Saturday</span>
             </div>
           </div>
           <div className="flex flex-col items-center gap-2">

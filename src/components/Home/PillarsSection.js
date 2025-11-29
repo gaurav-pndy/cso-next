@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+
 import Image from "next/image";
 
 const pillars = [
@@ -23,6 +28,57 @@ const pillars = [
   },
 ];
 
+function PillarCard({ pillar }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div
+      className=" rounded-3xl md:rounded-[3.5rem]   flex flex-col justify-end h-72 md:h-80 lg:h-96 xl:h-110  items-center relative perspective-1000"
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+    >
+      <motion.div
+        className="relative w-full h-full "
+        initial={false}
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        <div
+          className=" p-4 cursor-pointer shadow-lg rounded-3xl md:rounded-[3.5rem] bg-yellow-500  flex flex-col h-full justify-end"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <div className="absolute inset-0">
+            <Image
+              src={pillar.img}
+              alt={pillar.title}
+              fill
+              priority
+              quality={75}
+              className="object-cover! object-top!  rounded-3xl md:rounded-[3.5rem] relative!"
+            />
+          </div>
+          <h3
+            className="text-white z-10 text-lg md:text-xl lg:text-2xl font-bold mb-2 leading-6 md:leading-normal "
+            dangerouslySetInnerHTML={{ __html: pillar.title }}
+          ></h3>
+        </div>
+        <div
+          className="absolute inset-0 bg-[#0061e5] rounded-3xl md:rounded-[3.5rem] p-6 xl:py-10 xl:px-10  text-white flex flex-col h-full justify-center items-center text-center shadow-lg"
+          style={{
+            backfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+          }}
+        >
+          <p className="text-white text-sm md:text-base lg:text-xl ">
+            {pillar.desc}
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
 export default function PillarsSection() {
   return (
     <section className="bg-[#f7f7fb] py-14 px-4">
@@ -35,32 +91,9 @@ export default function PillarsSection() {
           <br className="hidden md:block" /> through four transformative
           initiatives.
         </p>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
           {pillars.map((pillar, idx) => (
-            <div
-              key={pillar.title}
-              className=" rounded-3xl md:rounded-[3.5rem] overflow-hidden shadow-lg flex flex-col justify-end h-120 md:h-160  items-center relative p-4 md:p-6"
-            >
-              <div className="absolute inset-0">
-                <Image
-                  src={pillar.img}
-                  alt={pillar.title}
-                  fill
-                  priority
-                  quality={75}
-                  className="object-cover! object-top!   relative!"
-                />
-              </div>
-              <div className="z-10 h-auto xl:h-60 ">
-                <h3
-                  className="text-white text-lg md:text-2xl font-bold mb-2 leading-6 md:leading-normal "
-                  dangerouslySetInnerHTML={{ __html: pillar.title }}
-                ></h3>
-                <p className="text-white text-sm md:text-lg md:mt-2">
-                  {pillar.desc}
-                </p>
-              </div>
-            </div>
+            <PillarCard key={idx} pillar={pillar} />
           ))}
         </div>
       </div>

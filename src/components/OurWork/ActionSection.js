@@ -2,6 +2,7 @@ import Image from "next/image";
 
 const works = [
   {
+    id: 1,
     title: "Kirby Place School",
     subtitle: "Education for All",
     description:
@@ -16,6 +17,7 @@ const works = [
     image: "/Work/01.png", // use image with gradient+photo as one
   },
   {
+    id: 2,
     title: "Scientific Outreach Programs",
     subtitle: "Making Science Accessible",
     description:
@@ -30,6 +32,7 @@ const works = [
     image: "/Work/02.png", // use image with gradient+photo as one
   },
   {
+    id: 3,
     title: "National Aviation Olympiad 2026",
     subtitle: "Aviation & Technology Awareness",
     description:
@@ -64,7 +67,7 @@ export default function ActionSection() {
           {works.map((work, idx) => (
             <div
               key={work.title}
-              className="relative rounded-2xl overflow-hidden shadow-lg w-full h-128 bg-yellow-300 md:h-120 xl:h-110 flex items-center"
+              className="relative rounded-2xl overflow-hidden shadow-lg w-full h-128 bg-yellow-300 md:h-132 lg:h-120 flex items-center"
             >
               {/* Full-background Image */}
               <Image
@@ -94,6 +97,16 @@ export default function ActionSection() {
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
+
+                  {work.id === 3 && (
+                    <a
+                      href="https://nationalaviationolympiad.com/"
+                      target="_blank"
+                      className="bg-[#eb6747] text-white w-fit mt-4  cursor-pointer hover:bg-[#e8532e] py-3 px-6 rounded-lg font-semibold flex justify-center items-center transition-all duration-300 focus:outline-none"
+                    >
+                      Learn More
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
