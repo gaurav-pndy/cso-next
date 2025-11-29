@@ -12,7 +12,7 @@ const options = [
     desc: "Become a monthly donor and provide consistent support to ensure our programs continue to grow and reach more students across India.",
     price: "Starting from ₹500/month",
     iframe:
-      "https://zohosecurepay.in/checkout/yrkuor3t-loxzosv3sxqyv/Monthly-Sponsor",
+      "https://zohosecurepay.in/checkout/yxt6ex31-z2vx23ou3v6go/Monthly-Sponsor",
   },
   {
     icon: "/GetInvolved/Support_Our_Mission_02.svg",
@@ -20,7 +20,7 @@ const options = [
     desc: "Fully sponsor a child’s education at Kirby Place School and empower them with access to quality education, mentorship, and daily nourishment.",
     price: "₹2,000/month per child",
     iframe:
-      "https://zohosecurepay.in/checkout/daqw2aej-ki4miac1a4ykw/Sponsor-a-Child",
+      "https://zohosecurepay.in/checkout/4pil9pey-t7r8721o2rati/Sponsor-a-Child",
   },
   {
     icon: "/GetInvolved/Support_Our_Mission_03.svg",
@@ -28,7 +28,7 @@ const options = [
     desc: "Sponsor a complete science workshop for a school and help students experience hands-on learning, interactive experiments, and STEM enrichment.",
     price: "₹10,000 per workshop",
     iframe:
-      "https://zohosecurepay.in/checkout/3na4qnsx-xk1dk3r231lkt/Fund-a-Workshop",
+      "https://zohosecurepay.in/checkout/6cij3caw-xk1dk3r231lkt/Fund-a-Workshop",
   },
   {
     icon: "/GetInvolved/Support_Our_Mission_04.svg",
@@ -36,7 +36,7 @@ const options = [
     desc: "Help us equip classrooms and labs with essential laboratory tools, learning materials, and STEM resources, creating a better environment for scientific exploration.",
     price: "₹5,000 – ₹50,000",
     iframe:
-      "https://zohosecurepay.in/checkout/yb298btk-lbtcbk26ktvgn/Support-Equipment",
+      "https://zohosecurepay.in/checkout/qbkezbn5-fs8asldql8g3q/Support-Equipment",
   },
 ];
 
